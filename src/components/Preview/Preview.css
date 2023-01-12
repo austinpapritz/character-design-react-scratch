@@ -7,6 +7,10 @@
   background: white;
 }
 
+.catchphrase-container {
+  margin-left: 100px;
+}
+
 .head-container {
   display: flex;
   flex-direction: row;
@@ -14,6 +18,9 @@
   padding-left: 185px;
 }
 
-.catchphrase-container {
-  margin-left: 100px;
+.head {
+  /* background-image: url('../../bird-head.png'); */
+  height: 250px;
+  width: 250px;
+  background-size: cover;
 }

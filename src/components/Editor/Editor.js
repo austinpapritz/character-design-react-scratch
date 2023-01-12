@@ -4,7 +4,7 @@ import './Editor.css';
 import Catchphrase from '../Catchphrase/Catchphrase';
 import Scoreboard from '../Scoreboard/Scoreboard';
 
-export default function Editor(setHead) {
+export default function Editor({ setHead }) {
   const handleHead = (e) => {
     setHead(e.target.value);
   };
