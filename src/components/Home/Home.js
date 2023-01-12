@@ -9,11 +9,12 @@ import Editor from '../Editor/Editor.js';
 export default function Home() {
   const [head, setHead] = useState('bird');
   const [body, setBody] = useState('blue');
+  const [bottom, setBottom] = useState('blue');
 
   return (
     <main>
-      <Preview head={head} body={body} />
-      <Editor setHead={setHead} setBody={setBody} />
+      <Preview head={head} body={body} bottom={bottom} />
+      <Editor setHead={setHead} setBody={setBody} setBottom={setBottom} />
     </main>
   );
 }

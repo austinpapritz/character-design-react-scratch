@@ -21,17 +21,20 @@
 .head {
   height: 250px;
   width: 250px;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .body {
   height: 250px;
   width: 250px;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .bottom {
   height: 250px;
   width: 250px;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
