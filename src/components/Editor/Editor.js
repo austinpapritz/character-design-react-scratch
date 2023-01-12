@@ -4,10 +4,14 @@ import './Editor.css';
 import Catchphrase from '../Catchphrase/Catchphrase';
 import Scoreboard from '../Scoreboard/Scoreboard';
 
-export default function Editor() {
+export default function Editor(setHead) {
+  const handleHead = (e) => {
+    setHead(e.target.value);
+  };
+
   return (
     <div className="editor-container">
-      <select className="head-select">
+      <select className="head-select" onChange={handleHead}>
         <option value="bird">Bird</option>
         <option value="dog">Dog</option>
         <option value="duck">Duck</option>
