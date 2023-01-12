@@ -1,4 +1,5 @@
 import React from 'react';
+import './Editor.css';
 
 import Catchphrase from '../Catchphrase/Catchphrase';
 import Scoreboard from '../Scoreboard/Scoreboard';

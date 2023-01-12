@@ -1,0 +1,17 @@
+.preview-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  background: white;
+}
+
+.head-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 185px;
+}
+
+.catchphrase-container {
+  margin-left: 100px;
+}
