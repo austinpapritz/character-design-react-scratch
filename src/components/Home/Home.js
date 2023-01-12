@@ -8,11 +8,12 @@ import Editor from '../Editor/Editor.js';
 
 export default function Home() {
   const [head, setHead] = useState('bird');
+  const [body, setBody] = useState('blue');
 
   return (
     <main>
-      <Preview head={head} />
-      <Editor setHead={setHead} />
+      <Preview head={head} body={body} />
+      <Editor setHead={setHead} setBody={setBody} />
     </main>
   );
 }

@@ -19,7 +19,18 @@
 }
 
 .head {
-  /* background-image: url('../../bird-head.png'); */
+  height: 250px;
+  width: 250px;
+  background-size: cover;
+}
+
+.body {
+  height: 250px;
+  width: 250px;
+  background-size: cover;
+}
+
+.bottom {
   height: 250px;
   width: 250px;
   background-size: cover;

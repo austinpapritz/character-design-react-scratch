@@ -4,9 +4,13 @@ import './Editor.css';
 import Catchphrase from '../Catchphrase/Catchphrase';
 import Scoreboard from '../Scoreboard/Scoreboard';
 
-export default function Editor({ setHead }) {
+export default function Editor({ setHead, setBody }) {
   const handleHead = (e) => {
     setHead(e.target.value);
+  };
+
+  const handleBody = (e) => {
+    setBody(e.target.value);
   };
 
   return (
@@ -18,7 +22,7 @@ export default function Editor({ setHead }) {
         <option value="horse">Horse</option>
       </select>
       <label>Select a head</label>
-      <select className="body-select">
+      <select className="body-select" onChange={handleBody}>
         <option value="blue">Blue</option>
         <option value="dress">Dress</option>
         <option value="pink">Pink</option>
