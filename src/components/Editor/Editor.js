@@ -44,7 +44,7 @@ export default function Editor({ setHead, setBody, setBottom }) {
           <option value="white">White</option>
         </select>
         <label>Select a bottom</label>
-        <Catchphrase catchphrases={catchphrases} setCatchphrases={setCatchphrases} />
+        <Catchphrase />
         <Scoreboard />
       </div>
     </div>
