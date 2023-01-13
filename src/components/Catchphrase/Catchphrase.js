@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import './Catchphrase.css';
 
-export default function Catchphrase({ setCatchphrases }) {
+export default function Catchphrase({ catchphrases, setCatchphrases }) {
   const [inputValue, setInputValue] = useState('');
 
   const handleInput = (e) => {
@@ -19,6 +19,11 @@ export default function Catchphrase({ setCatchphrases }) {
       <input type="text" value={inputValue} onChange={handleInput}></input>
       <button onClick={handleSubmit}>Submit</button>
       <label>Add a catchphrase</label>
+      <ul>
+        {catchphrases.map((a) => {
+          return <li key={a}>{a}</li>;
+        })}
+      </ul>
     </div>
   );
 }
