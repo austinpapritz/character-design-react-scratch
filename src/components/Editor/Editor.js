@@ -6,18 +6,23 @@ import Catchphrase from '../Catchphrase/Catchphrase.js';
 import Scoreboard from '../Scoreboard/Scoreboard.js';
 
 export default function Editor({ setHead, setBody, setBottom }) {
-  const [catchphrases, setCatchphrases] = useState('');
+  const [headCount, setHeadCount] = useState(0);
+  const [bodyCount, setBodyCount] = useState(0);
+  const [bottomCount, setBottomCount] = useState(0);
 
   const handleHead = (e) => {
     setHead(e.target.value);
+    setHeadCount(headCount + 1);
   };
 
   const handleBody = (e) => {
     setBody(e.target.value);
+    setBodyCount(bodyCount + 1);
   };
 
   const handleBottom = (e) => {
     setBottom(e.target.value);
+    setBottomCount(bottomCount + 1);
   };
 
   return (
@@ -44,8 +49,8 @@ export default function Editor({ setHead, setBody, setBottom }) {
           <option value="white">White</option>
         </select>
         <label>Select a bottom</label>
+        <Scoreboard headCount={headCount} bodyCount={bodyCount} bottomCount={bottomCount} />
         <Catchphrase />
-        <Scoreboard />
       </div>
     </div>
   );
