@@ -1,7 +1,7 @@
 import React from 'react';
 import './Preview.css';
 
-export default function Preview({ head, body, bottom, catchphrases }) {
+export default function Preview({ head, body, bottom }) {
   return (
     <div className="preview-container">
       <div
