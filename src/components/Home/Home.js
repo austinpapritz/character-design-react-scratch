@@ -10,17 +10,11 @@ export default function Home() {
   const [head, setHead] = useState('bird');
   const [body, setBody] = useState('blue');
   const [bottom, setBottom] = useState('blue');
-  const [setCatchphrases] = useState('"Give me a catchphrase!"');
 
   return (
     <main>
       <Preview head={head} body={body} bottom={bottom} />
-      <Editor
-        setHead={setHead}
-        setBody={setBody}
-        setBottom={setBottom}
-        setCatchphrases={setCatchphrases}
-      />
+      <Editor setHead={setHead} setBody={setBody} setBottom={setBottom} />
     </main>
   );
 }

@@ -1,10 +1,13 @@
 import React from 'react';
+import { useState } from 'react';
 import './Editor.css';
 
 import Catchphrase from '../Catchphrase/Catchphrase.js';
 import Scoreboard from '../Scoreboard/Scoreboard.js';
 
-export default function Editor({ setHead, setBody, setBottom, setCatchphrases }) {
+export default function Editor({ setHead, setBody, setBottom }) {
+  const [catchphrases, setCatchphrases] = useState('');
+
   const handleHead = (e) => {
     setHead(e.target.value);
   };
@@ -41,7 +44,7 @@ export default function Editor({ setHead, setBody, setBottom, setCatchphrases })
           <option value="white">White</option>
         </select>
         <label>Select a bottom</label>
-        <Catchphrase setCatchphrases={setCatchphrases} />
+        <Catchphrase catchphrases={catchphrases} setCatchphrases={setCatchphrases} />
         <Scoreboard />
       </div>
     </div>

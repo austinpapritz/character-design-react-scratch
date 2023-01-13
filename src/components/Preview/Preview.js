@@ -1,16 +1,14 @@
 import React from 'react';
 import './Preview.css';
 
-export default function Preview({ head, body, bottom }) {
+export default function Preview({ head, body, bottom, catchphrases }) {
   return (
     <div className="preview-container">
-      <div className="head-container">
-        <div
-          className="head"
-          style={{ backgroundImage: `url('${process.env.PUBLIC_URL}/assets/${head}-head.png')` }}
-        ></div>
-        <div className="catchphrase-container">Catchphrase</div>
-      </div>
+      <div
+        className="head"
+        style={{ backgroundImage: `url('${process.env.PUBLIC_URL}/assets/${head}-head.png')` }}
+      ></div>
+
       <div
         className="body"
         style={{ backgroundImage: `url('${process.env.PUBLIC_URL}/assets/${body}-middle.png')` }}

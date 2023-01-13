@@ -7,17 +7,6 @@
   background: white;
 }
 
-.catchphrase-container {
-  margin-left: 100px;
-}
-
-.head-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-left: 185px;
-}
-
 .head {
   height: 250px;
   width: 250px;
