@@ -1,0 +1,26 @@
+.editor-container {
+  width: 40%;
+  background: palegoldenrod;
+}
+
+.editor-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.editor-content select {
+  text-align: center;
+  font-size: 2rem;
+  width: 20%;
+  border-radius: 0.5rem;
+}
+
+.option {
+  display: block;
+}
+
+.option:first-letter {
+  text-transform: uppercase;
+}
