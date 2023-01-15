@@ -13,7 +13,14 @@
 .editor-content select {
   text-align: center;
   font-size: 2rem;
-  height: 50px;
   width: 20%;
   border-radius: 0.5rem;
+}
+
+.option {
+  display: block;
+}
+
+.option:first-letter {
+  text-transform: uppercase;
 }

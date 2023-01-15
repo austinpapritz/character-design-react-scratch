@@ -6,6 +6,10 @@ import Catchphrase from '../Catchphrase/Catchphrase.js';
 import Scoreboard from '../Scoreboard/Scoreboard.js';
 
 export default function Editor({ setHead, setBody, setBottom }) {
+  let headArr = ['bird', 'dog', 'duck', 'horse'];
+  let bodyArr = ['blue', 'dress', 'pink', 'red'];
+  let bottomArr = ['blue', 'dog', 'leg', 'white'];
+
   const [headCount, setHeadCount] = useState(0);
   const [bodyCount, setBodyCount] = useState(0);
   const [bottomCount, setBottomCount] = useState(0);
@@ -29,24 +33,36 @@ export default function Editor({ setHead, setBody, setBottom }) {
     <div className="editor-container">
       <div className="editor-content">
         <select className="head-select" onChange={handleHead}>
-          <option value="bird">Bird</option>
-          <option value="dog">Dog</option>
-          <option value="duck">Duck</option>
-          <option value="horse">Horse</option>
+          {headArr.map((head, i) => {
+            i++;
+            return (
+              <option key={i} value={head} className="option">
+                {head}
+              </option>
+            );
+          })}
         </select>
         <label>Select a head</label>
         <select className="body-select" onChange={handleBody}>
-          <option value="blue">Blue</option>
-          <option value="dress">Dress</option>
-          <option value="pink">Pink</option>
-          <option value="red">Red</option>
+          {bodyArr.map((body, j) => {
+            j++;
+            return (
+              <option key={j} value={body} className="option">
+                {body}
+              </option>
+            );
+          })}
         </select>
         <label>Select a body</label>
         <select className="bottom-select" onChange={handleBottom}>
-          <option value="blue">Blue</option>
-          <option value="dog">Dog</option>
-          <option value="leg">Leg</option>
-          <option value="white">White</option>
+          {bottomArr.map((bottom, k) => {
+            k++;
+            return (
+              <option key={k} value={bottom} className="option">
+                {bottom}
+              </option>
+            );
+          })}
         </select>
         <label>Select a bottom</label>
         <Scoreboard headCount={headCount} bodyCount={bodyCount} bottomCount={bottomCount} />
